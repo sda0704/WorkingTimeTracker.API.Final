@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="WorkingTimeTracker.API/WorkingTimeTracker.API.csproj" />
+  <Project Path="WorkingTimeTracker.Core/WorkingTimeTracker.Core.csproj" />
+  <Project Path="WorkingTimeTracker.DataAccess/WorkingTimeTracker.DataAccess.csproj" />
+</Solution>
