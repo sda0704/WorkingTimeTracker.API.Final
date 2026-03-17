@@ -23,6 +23,24 @@ public class TimeEntryMapper
         return time;
     }
 
+    public static Time ToDomain( UpdateTimeEntryDTO dto, Guid id)
+    {
+        var (time, error) = Time.Create(
+            id: Guid.NewGuid(),
+            taskId: dto.TaskId,
+            date: dto.Date,
+            hours: dto.Hours,
+            description: dto.Description
+            );
+        if (!string.IsNullOrEmpty(error))
+        {
+            throw new InvalidOperationException(error);
+
+        }
+        return time;
+    }
+
+
     public static TimeEntryDTO ToDto(Time time)
     {
         return new TimeEntryDTO
